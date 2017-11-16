@@ -65,4 +65,12 @@ public class LibraryTest {
 		assertTrue("succesfully got copy", lib.getCopy(id).equals(c));
 	}
 
+	@Test
+	public void get_invalid_patron()
+	{
+		Library lib = new Library();
+		Patron p = new Patron("d");
+		lib.AddPatron(p);
+		assertTrue("patron added", lib.GetPatron("999") == null);
+	}
 }
