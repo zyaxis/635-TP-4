@@ -71,6 +71,6 @@ public class LibraryTest {
 		Library lib = new Library();
 		Patron p = new Patron("d");
 		lib.AddPatron(p);
-		assertTrue("patron added", lib.GetPatron("999") == null);
+		assertTrue("invalid patron retrieved", lib.GetPatron("999") == null);
 	}
 }

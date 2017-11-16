@@ -19,7 +19,7 @@ public class EventTest {
 	{
 		Event e = new Event();
 		e.newLog();
-		assertTrue("succesfully got copy", e.getLogSize() == 0);
+		assertTrue("new log is empty", e.getLogSize() == 0);
 	}
 
 	@Test
@@ -27,6 +27,13 @@ public class EventTest {
 	{
 		Event e = new Event();
 		e.logEvent("test");
-		assertTrue("succesfully got copy", e.getLogSize() == 1);
+		assertTrue("log event added", e.getLogSize() == 1);
+	}
+	
+	@Test
+	public void new_log()
+	{
+		Event e = new Event();
+		assertTrue("log object starts empty", e.getLogSize() == 0);
 	}
 }
