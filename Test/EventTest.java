@@ -36,4 +36,18 @@ public class EventTest {
 		Event e = new Event();
 		assertTrue("log object starts empty", e.getLogSize() == 0);
 	}
+	
+	@Test
+	public void new_log2()
+	{
+		Event e = new Event();
+		e.newLog("this is a test string");
+		assertFalse("log object starts empty", e.getLogSize() == 0);
+	}
+	
+	public void print_log() {
+		
+	}
+	
+	
 }

@@ -58,4 +58,16 @@ public class PatronTest {
 		d.CheckoutBook(c);
 		assertTrue("patron has hold", d.hasHolds(LocalDateTime.now()));
 	}
+	
+	@org.junit.Test
+	public void check_in_success()
+	{
+		Patron d = new Patron("name");
+		Copy c = new Copy("a", "b", "c");
+		d.CheckoutBook(c);
+		d.CheckinBook(c);
+		assertTrue("checkin success", d.getCheckedOutCount() == 0);
+
+	}
+	
 }
